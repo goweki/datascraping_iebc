@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  datascrapingiebc:
+    image: datascrapingiebc
+    build:
+      context: .
+      dockerfile: ./Dockerfile
