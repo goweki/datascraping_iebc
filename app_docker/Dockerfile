@@ -1,6 +1,6 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
 #FROM python:3.10.0-alpine
-FROM python:3.10.0
+FROM ubuntu:20.04
 
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -10,7 +10,8 @@ ENV PYTHONUNBUFFERED=1
 
 # Install pip requirements
 COPY requirements.txt .
-RUN python -m pip install -r requirements.txt
+RUN sudo apt install python3-pip
+RUN python3 -m pip install -r requirements.txt
 
 WORKDIR /app
 COPY . /app
