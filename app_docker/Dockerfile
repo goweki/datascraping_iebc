@@ -1,6 +1,6 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
 #FROM python:3.10.0-alpine
-FROM ubuntu:20.04
+FROM python:3.8-bullseye
 
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
